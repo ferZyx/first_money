@@ -59,6 +59,10 @@ function loadQuiz() {
 
     questionElement.innerHTML = currentQuizData.question;
     questionNumber.innerHTML = `${currentQuiz + 1}/${questions.length}`
+
+    for(let i=0;i<10;i++){
+        insertAfter(document.getElementById('li'+getRandomInt(1,6)), document.getElementById('li' + getRandomInt(1,6)))
+    }
     
     a_text.innerHTML = currentQuizData.a;
     b_text.innerHTML = currentQuizData.b;
@@ -66,9 +70,7 @@ function loadQuiz() {
     d_text.innerHTML = currentQuizData.d;
     e_text.innerHTML = currentQuizData.e;
 
-    for(let i=0;i<10;i++){
-        insertAfter(document.getElementById('li'+getRandomInt(1,6)), document.getElementById('li' + getRandomInt(1,6)))
-    }
+    
 }
 
 function deselectAnswers() {
